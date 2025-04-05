@@ -145,9 +145,7 @@ if submitted:
     if prediction[0] == 1:
         st.success("🎉 **Promoted!** The student will be promoted! 🏆")
 
-        # 🎉 Celebration effects
-        st.balloons()  
-        rain(emoji="🎉", font_size=20, falling_speed=3, animation_length="infinite")
+
 
         # Displaying result in an elegant card
         st.markdown(

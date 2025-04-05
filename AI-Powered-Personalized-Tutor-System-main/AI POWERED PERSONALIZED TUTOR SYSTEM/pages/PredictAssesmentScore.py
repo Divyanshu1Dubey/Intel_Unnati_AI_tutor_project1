@@ -151,7 +151,5 @@ if submitted:
         unsafe_allow_html=True
     )
 
-    # Celebration effects
-    st.balloons()  
 
 
