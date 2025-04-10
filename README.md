@@ -60,7 +60,7 @@ Content Recommendation:
 
 🛠 Model: Softmax Regression
 
-📈 Accuracy: 100%
+📈 Accuracy: 99.94758%
 
 🏆 Outcome: Flawless delivery of personalized content recommendations.
 
@@ -70,7 +70,7 @@ Assessment Score Prediction:
 
 📉 Mean Squared Error (MSE): 0.0008
 
-📈 R² Score: 100%
+📈 R² Score: 97.23667%
 
 🏆 Outcome: Exceptional accuracy in forecasting assessment scores.
 
@@ -78,7 +78,7 @@ Content Retention/Skipping:
 
 🛠 Model: XGBoostClassifier
 
-📈 Accuracy: 100%
+📈 Accuracy: 96.23869%
 
 🏆 Outcome: Precise identification of content importance for student learning paths.
 
