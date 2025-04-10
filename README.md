@@ -52,7 +52,7 @@ Student Promotion Prediction:
 
 🛠 Model: RandomForestClassifier
 
-📈 Accuracy: 99.99%
+📈 Accuracy: 97.23667%
 
 🏆 Outcome: High precision in predicting student promotion readiness.
 
