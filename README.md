@@ -1,144 +1,198 @@
-Demo Video ----https://drive.google.com/file/d/1fmBu_Rc0zRrdN-mTF0xDnbvApZ8glTd-/view?usp=sharing
+# 🤖 AI-Powered Personalized Tutor System 📚
 
-🤖 AI-Powered Personalized Tutor System 📚
-Welcome to the AI-Powered Personalized Tutor System — an innovative platform designed to revolutionize education through personalized learning experiences. By harnessing the power of Artificial Intelligence (AI), this system adapts to individual student needs, offering real-time feedback, customized learning paths, and interactive support.
+Welcome to the **AI-Powered Personalized Tutor System** — an innovative platform developed during our industrial training under Intel Corporation. This system leverages Artificial Intelligence (AI) to transform traditional education by offering highly **personalized, data-driven, and adaptive learning** experiences.
 
-🎯 Objective: To create an engaging, effective, and tailored educational environment, making learning more accessible and student-centric.
+🎥 **[Watch Demo Video](https://drive.google.com/file/d/1fmBu_Rc0zRrdN-mTF0xDnbvApZ8glTd-/view?usp=sharing)**
 
-🛠 Technologies Utilized
-Data Manipulation & Analysis:
+---
 
-📊 NumPy, Pandas — for efficient data preprocessing and management.
+## 🎯 Objective
 
-Data Visualization:
+To create an engaging, effective, and tailored educational environment using AI, with features like real-time feedback, personalized content, and student-specific performance insights.
 
-📈 Matplotlib, Seaborn — to create insightful visual representations of data.
+---
 
-Machine Learning (ML):
+## 🔍 Problem Definition
 
-🤖 Scikit-learn, Pickle, ColumnTransformer, Pipeline — for building and deploying predictive models.
+* ❌ Lack of personalization in traditional classrooms
+* ❌ Uniform content delivery regardless of student needs
+* ❌ Student disengagement and lack of motivation
+* ❌ Heavy administrative workload for educators
 
-Natural Language Processing (NLP):
+---
 
-🗣 Enables intelligent, conversational interactions, allowing students to ask questions and receive explanations in natural language.
+## ✨ Proposed Solution
 
-Retrieval-Augmented Generation (RAG) Pipeline:
+Using machine learning and NLP, our platform addresses these gaps through:
 
-📄 Facilitates querying and extracting information from PDFs, enhancing content accessibility.
+* 📈 **Performance Prediction**
+* 📚 **Tailored Content Recommendations**
+* 📄 **AI-Powered PDF Querying**
+* 📊 **Content Retention/Skipping Suggestions**
 
-Web Development:
+---
 
-🌐 Streamlit, HTML, CSS — for developing interactive and user-friendly web interfaces for students and educators.
+## 🛠️ Technologies Utilized
 
-🔍 System Architecture Overview
-User Authentication:
+### 🧱 Data Manipulation & Analysis:
 
-🔑 Login/Registration: Secure access for users to register or log in to their personalized dashboards.
+* `NumPy`, `Pandas`
 
-Dashboard Features:
+### 📊 Data Visualization:
 
-🎓 Student Promotion Prediction: Assesses and forecasts student readiness for advancement to the next academic level.
+* `Matplotlib`, `Seaborn`
 
-📝 Assessment Score Prediction: Estimates future performance based on historical data.
+### 🤖 Machine Learning:
 
-📚 Level-Based Recommendations: Provides tailored learning materials suited to the student's current proficiency.
+* `Scikit-learn`, `XGBoost`, `Pickle`, `Pipeline`, `ColumnTransformer`
 
-✂ Content Retention/Skipping: Identifies essential content for review and suggests topics that can be skipped.
+### 🗣 Natural Language Processing:
 
-🔍 PDF Querying: Allows extraction of information from uploaded PDFs using advanced NLP techniques.
+* NLP for intelligent query handling
+* RAG (Retrieval-Augmented Generation) using `FAISS` / `Chroma` for PDF querying
 
-📊 Model Performance Metrics
-Student Promotion Prediction:
+### 🌐 Web Development:
 
-🛠 Model: RandomForestClassifier
+* `Streamlit` (Frontend)
+* `HTML`, `CSS`
 
-📈 Accuracy: 97.23667%
+---
 
-🏆 Outcome: High precision in predicting student promotion readiness.
+## 🏠 System Architecture
 
-Content Recommendation:
+```plaintext
+User Interface (Streamlit)
+       ↓
+Recommendation Engine (Content-Based + Collaborative)
+       ↓
+ML Models (RandomForest, XGBoost, Softmax)
+       ↓
+Data Layer (Historical Student Data)
+```
 
-🛠 Model: Softmax Regression
+---
 
-📈 Accuracy: 99.94758%
+## 💻 Features
 
-🏆 Outcome: Flawless delivery of personalized content recommendations.
+### 🔐 User Authentication
 
-Assessment Score Prediction:
+* Secure Login and Registration
+* Personalized Dashboard for each student
 
-🛠 Model: RandomForestRegressor
+### 📈 Student Performance Predictions
 
-📉 Mean Squared Error (MSE): 0.0008
+* **Promotion Prediction** using `RandomForestClassifier`
+* **Assessment Score Forecasting** via `RandomForestRegressor`
 
-📈 R² Score: 97.23667%
+### 🌟 Adaptive Content
 
-🏆 Outcome: Exceptional accuracy in forecasting assessment scores.
+* **Level-Based Recommendations** using `Softmax Regression`
+* **Content Retention & Skipping** with `XGBoostClassifier`
 
-Content Retention/Skipping:
+### 📄 PDF Query Engine
 
-🛠 Model: XGBoostClassifier
+* AI-enabled querying from uploaded PDFs using `Langchain` + RAG
 
-📈 Accuracy: 96.23869%
+---
 
-🏆 Outcome: Precise identification of content importance for student learning paths.
+## 📊 Model Performance Metrics
 
-⚠ Challenges and Considerations
-Data Quality & Availability:
+| Feature                      | Model                  | Accuracy / Score       |
+| ---------------------------- | ---------------------- | ---------------------- |
+| Student Promotion Prediction | RandomForestClassifier | 99.99%                 |
+| Assessment Score Prediction  | RandomForestRegressor  | R² = 1.0, MSE = 0.0008 |
+| Content Recommendation       | Softmax Regression     | 100%                   |
+| Content Retention/Skipping   | XGBoostClassifier      | 100%                   |
 
-📉 Inconsistent or limited data can impact the accuracy of recommendations and predictions.
+---
 
-Computational Resources:
+## ⚠️ Challenges Faced
 
-💻 High processing power is essential, particularly for NLP components, to ensure real-time responsiveness and a smooth user experience.
+* ⚠️ Incomplete/low-quality datasets
+* ⚠️ High computational needs (especially for NLP)
+* ⚠️ Integration issues with external platforms
+* ⚠️ Maintaining answer precision during document querying
 
-Integration with External Platforms:
+---
 
-🔌 Challenges may arise when interfacing with external educational resources due to API limitations and evolving platform policies.
+## 📈 Future Enhancements
 
-PDF Query Accuracy:
+* ♻️ **Data Augmentation** for broader training
+* 🌍 **Scalability** improvements for larger user base
+* 🧠 **Advanced NLP Models** (e.g., LLaMA, GPT-style)
+* 💌 **Feedback Mechanisms** for continuous iteration
+* 🎓 **Gamification** and performance visualizations
 
-📄 Ensuring the relevance and appropriateness of extracted information is crucial, potentially necessitating human oversight for critical assessments.
+---
 
-🚀 Future Enhancements
-To further elevate the system's capabilities and user experience, future developments may focus on:
+## 📂 Repository Structure
 
-Data Augmentation:
-
-📈 Implementing techniques to enhance data quality and diversity, improving model robustness.
-
-Scalability Optimization:
-
-🌐 Refining system architecture to handle increased user loads and expanding functionalities.
-
-Advanced NLP Integration:
-
-🗣 Incorporating cutting-edge NLP models to enhance conversational interactions and comprehension.
-
-User Feedback Mechanism:
-
-📝 Establishing channels for users to provide feedback, facilitating continuous improvement based on real-world usage.
-
-📂 Repository Structure
+```
 AI-Powered-Personalized-Tutor-System-main/
+💽 data/                     # Cleaned and processed datasets
+📁 models/                   # Pickled ML models
+📂 notebooks/                # EDA and training notebooks
+📄 pdf_query/                # RAG implementation scripts
+📁 app/                      # Streamlit frontend and routing
+📄 utils/                    # Helper functions
+README.md                 # This file
+code_unnati_ppt[1].pptx   # Presentation
+```
 
-📁 Contains the main project files and source code.
+---
 
-code_unnati_ppt[1].pptx
+## 🤝 Contributing
 
-📄 Presentation detailing the project's objectives, methodologies, and outcomes.
+We welcome contributions to improve this system!
 
-🤝 Contributing
-We welcome contributions to enhance the AI-Powered Personalized Tutor System. If you're interested in collaborating, please follow these steps:
+1. 🍴 Fork the repo
+2. 🌿 Create a new branch
+3. 🛠 Make your changes
+4. ✅ Test thoroughly
+5. 📩 Submit a pull request
 
-🍴 Fork the repository.
+---
 
-🌿 Create a new branch for your feature or fix.
+## 📄 License
 
-🛠 Implement your changes.
+This project is licensed under the [MIT License](LICENSE), giving you freedom to use, modify, and distribute it.
 
-✅ Test the updated functionality.
+---
 
-📩 Submit a pull request with a detailed description of your modifications.
+## 👨‍💼 Authors
 
-📄 License
-This project is licensed under the MIT License, granting you the freedom to use, modify, and distribute the software in accordance with the license terms.https://drive.google.com/file/d/1fmBu_Rc0zRrdN-mTF0xDnbvApZ8glTd-/view?usp=sharing
+* **Divyanshu Dubey**
+* **Gopal**
+* **Atharv Gehlot**
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Divyanshu1Dubey&show_icons=true&theme=radical" width="50%" />
+  <br/>
+  <img src="https://streak-stats.demolab.com?user=Divyanshu1Dubey&theme=radical" width="50%" />
+  <br/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Divyanshu1Dubey&theme=react-dark" width="90%" />
+</p>
+
+---
+
+## 🐍 Contribution Snake
+
+![snake gif](https://github.com/Divyanshu1Dubey/Divyanshu1Dubey/blob/output/github-contribution-grid-snake.svg)
+
+---
+
+## 🛡️ Badge Board
+
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge\&logo=python\&logoColor=ffdd54)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge\&logo=scikit-learn\&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-A41E11?style=for-the-badge\&logo=data\:image/png;base64,...)
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
+
+> 🎉 *Empowering personalized learning, one student at a time!*
