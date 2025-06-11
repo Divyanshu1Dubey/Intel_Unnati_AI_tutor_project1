@@ -7,7 +7,6 @@ Welcome to the **AI-Powered Personalized Tutor System** — an innovative platfo
 ---
 
 ## 🎯 Objective
-
 To create an engaging, effective, and tailored educational environment using AI, with features like real-time feedback, personalized content, and student-specific performance insights.
 
 ---
